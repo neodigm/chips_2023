@@ -61,43 +61,26 @@
                 --chips-theme-red:   #CF2027;  /* Accent | red of the italian flag */
             }
         </style>
-        <style>  /* overrides */
+        <style>  /* custom */
             /* font-family: 'Montserrat', sans-serif; */
         </style>
 
         <style>
             /*  N55 overrides  */
-            /* brand */
-            .l-snackbar .snackbar__cont[data-n55-theme='brand'] { box-shadow: inset #0082ba 0 0 6px 2px !important; background: linear-gradient(45deg, #0082ba 0%, #0082ba 100%) !important; }
-            .l-snackbar .snackbar__cont[data-n55-theme='brand'] .snackbar__progbar { background-color: #005f88 !important }
-            .l-snackbar .snackbar__cont[data-n55-theme='brand'] .snackbar__progbar { background: #005f88 !important }
+            /* brand | primary | secondary */
+            .l-snackbar .snackbar__cont[data-n55-theme='brand'] { box-shadow: inset var(--chips-theme-green) 0 0 6px 2px !important; background: linear-gradient(45deg, var(--chips-theme-green) 0%, var(--chips-theme-green) 100%) !important; }
+                .l-snackbar .snackbar__cont[data-n55-theme='brand'] .snackbar__progbar { background-color: var(--chips-theme-red) !important }
+                .l-snackbar .snackbar__cont[data-n55-theme='brand'] .snackbar__progbar { background: var(--chips-theme-red) !important }
+            .l-snackbar .snackbar__cont[data-n55-theme='primary'] { box-shadow: inset var(--chips-theme-beige) 0 0 6px 2px !important; background: linear-gradient(45deg, var(--chips-theme-beige) 0%, var(--chips-theme-beige) 100%) !important; }
+                .l-snackbar .snackbar__cont[data-n55-theme='primary'] .snackbar__progbar { background-color: var(--chips-theme-green) !important }
+                .l-snackbar .snackbar__cont[data-n55-theme='primary'] .snackbar__progbar { background: var(--chips-theme-green) !important }
+            .l-snackbar .snackbar__cont[data-n55-theme='secondary'] { box-shadow: inset var(--chips-theme-red)   0 0 6px 2px !important; background: linear-gradient(45deg, var(--chips-theme-red) 0%, var(--chips-theme-red)     100%) !important; }
+                .l-snackbar .snackbar__cont[data-n55-theme='secondary'] .snackbar__progbar { background-color: var(--chips-theme-beige) !important }
+                .l-snackbar .snackbar__cont[data-n55-theme='secondary'] .snackbar__progbar { background: var(--chips-theme-beige) !important }
 
-            [data-n55-enchanted-cta][data-n55-theme='brand'] { background: linear-gradient(#0082ba, #00629a) !important; }
-            neodigm-kpi[data-n55-theme='brand'] { background: radial-gradient(circle, #005f88 0%, #00629a 100%) !important; }
-            [data-n55-select][data-n55-theme='brand']     { border-color: #005f88 !important; color: #005f88 !important; }
-            
-            /* secondary */
-            .l-snackbar .snackbar__cont[data-n55-theme='secondary'] { box-shadow: inset #CFD92Cff 0 0 6px 2px !important; background: linear-gradient(45deg, #CFD92Cff 0%, #CFD92Cff 100%) !important; }
-            .l-snackbar .snackbar__cont[data-n55-theme='secondary'] .snackbar__progbar { background-color: #91C540ff !important }
-            .l-snackbar .snackbar__cont[data-n55-theme='secondary'] .snackbar__progbar { background: #91C540ff !important }
-
-            [data-n55-enchanted-cta][data-n55-theme='secondary'] { background: linear-gradient(#91C540ff, #81B530ff) !important; }
-            neodigm-kpi[data-n55-theme='secondary'] { background: radial-gradient(circle, #91C540ff 0%, #91C540ff 100%) !important; }
-            [data-n55-select][data-n55-theme='secondary']     { border-color: #91C540ff !important; color: #005f88 !important; }
-
-            /* danger */
-            neodigm-kpi[data-n55-theme='danger'] { background: radial-gradient(circle, #DD4124 0%, #DD4124 100%) !important; }
-            [data-n55-select][data-n55-theme='danger']     { border-color: #DD4124 !important; color: #005f88 !important; }
-
-            /* warning */
-            neodigm-kpi[data-n55-theme='warning'] { background: radial-gradient(circle, #F5DF4D 0%, #F5DF4D 100%) !important; }
-            [data-n55-select][data-n55-theme='warning']     { border-color: #F5DF4D !important; color: #005f88 !important; }
-
-            neodigm-sodapop-scrim[data-n55-sodapop-scrim='opened'] { background-color: rgba(0,130,186, .6) !important; } /* .7 */
-            .h-pro-tip{ cursor: pointer; user-select: none; }
-            body > output > neodigm-sodapop-scrim {backdrop-filter: blur(0px) !important;}
-
-            neodigm-kpi[data-n55-kpi-size=small]>h5 { font-size: 2.3rem !important; }
+            [data-n55-enchanted-cta][data-n55-theme='brand']     { background: linear-gradient(var(--chips-theme-green), var(--chips-theme-green)) !important; }
+            [data-n55-enchanted-cta][data-n55-theme='primary']   { background: linear-gradient(var(--chips-theme-beige), var(--chips-theme-beige)) !important; }
+            [data-n55-enchanted-cta][data-n55-theme='secondary'] { background: linear-gradient(var(--chips-theme-red), var(--chips-theme-red)) !important; }
 
             /* Data View Grid */
             .l-dataview { display:grid; grid-template-columns: 2% 20% 20% 20% 38%;}
@@ -109,24 +92,40 @@
         <a class="js-skip__main--id skip__main" href="#a11y-skipmain">Skip to Main Content</a>
         <main id="a11y-skipmain" role="main">
 QQQQQQQQ
-<a id="js-open-pup--sm" href="#js-open-pup--sm"
+<a id="js-open-pup--brand" href="#js-open-pup--sm"
     target="_blank" rel="noopener" tabindex="0" aria-haspopup="true"
     data-n55-enchanted-cta
-    data-n55-enchanted-cta-alt="Text|Alternate"
-    data-n55-enchanted-cta-ambient="emit"
-    data-n55-enchanted-cta-dont-touch="false"
-    data-n55-enchanted-cta-shape-off="false"
-    data-n55-enchanted-cta-hover-an="true"
-    data-n55-enchanted-cta-size="medium"
-    data-n55-flash-theme="marcom"
-    data-n55-sodapop-id="myPopup--sm"
-    data-n55-theme="night"
-    data-n55-toast="Toast Message"
-    data-n55-wired4sound-click="7"
+    data-n55-theme="brand" data-n55-enchanted-cta-alt="Text|Alternate" data-n55-enchanted-cta-ambient="emit" data-n55-enchanted-cta-dont-touch="false" data-n55-enchanted-cta-shape-off="false" data-n55-enchanted-cta-hover-an="true" data-n55-enchanted-cta-size="medium" data-n55-flash-theme="marcom" data-n55-sodapop-id="myPopup--sm" data-n55-toast="Toast Message" data-n55-wired4sound-click="7"
+    ><span data-n55-wired4sound-mouseover="3">Open Popup ⭐ Small</span><span>Toast Msg ⭐ Flash Theme</span>
+</a>
+<a id="js-open-pup--primary" href="#js-open-pup--sm"
+    target="_blank" rel="noopener" tabindex="0" aria-haspopup="true"
+    data-n55-enchanted-cta
+    data-n55-theme="primary" data-n55-enchanted-cta-alt="Text|Alternate" data-n55-enchanted-cta-ambient="emit" data-n55-enchanted-cta-dont-touch="false" data-n55-enchanted-cta-shape-off="false" data-n55-enchanted-cta-hover-an="true" data-n55-enchanted-cta-size="medium" data-n55-flash-theme="marcom" data-n55-sodapop-id="myPopup--sm" data-n55-toast="Toast Message" data-n55-wired4sound-click="7"
+    ><span data-n55-wired4sound-mouseover="3">Open Popup ⭐ Small</span><span>Toast Msg ⭐ Flash Theme</span>
+</a>
+<a id="js-open-pup--secondary" href="#js-open-pup--sm"
+    target="_blank" rel="noopener" tabindex="0" aria-haspopup="true"
+    data-n55-enchanted-cta
+    data-n55-theme="secondary" data-n55-enchanted-cta-alt="Text|Alternate" data-n55-enchanted-cta-ambient="emit" data-n55-enchanted-cta-dont-touch="false" data-n55-enchanted-cta-shape-off="false" data-n55-enchanted-cta-hover-an="true" data-n55-enchanted-cta-size="medium" data-n55-flash-theme="marcom" data-n55-sodapop-id="myPopup--sm" data-n55-toast="Toast Message" data-n55-wired4sound-click="7"
     ><span data-n55-wired4sound-mouseover="3">Open Popup ⭐ Small</span><span>Toast Msg ⭐ Flash Theme</span>
 </a>
 
-<!-- (c) 2023 🗝️ www.theScottKrause.com -->
+<!-- APPROVED COPY
+Our website is currently under construction
+In the meantime, Please shop at our new store at 4820 75th Street and call us at 262-657-9142 for all inquiries.
+FAMILY OWNED
+We are a family business that has been solving foot problems since 1921. Now four generations in, footwear is in our blood. Lori, Fred, Nick, and Tony Chiappetta have unique individual strengths that have created a perfect team.
+PROBLEM SOLVERS
+Chiappetta Shoes have on-hand pedorthists to properly analyze your feet and give you the best solution to solve your foot problem. Our custom orthotics are arguably the best in the country and have improved thousands of lives.
+QUALITY SEEKERS
+Not only is our footwear top quality, but our staff are too. When you come to our store, you will receive one-on-one customer service where your needs are put first. Our new store is also built on quality to match the quality of service and footwear offered. Chiappetta Shoes currently holds the title of "Best Comfort Specialty Store" by Footwear Plus Magazine.
+SERVICES
+While the eyes may be the window to one’s soul, the feet are the window to one’s general health. If you suffer from foot pain, you are not alone. Over 75% of adults will suffer from serious foot problems during their lifetime. For over four generations, Chiappetta Shoes has dedicated our business to promoting healthier living through good foot health. What does our commitment to understanding and alleviating foot problems mean for you? To our pedorthic team, living with foot pain is simply not an option. We are advocates for our customers, devoted to tailoring solutions that allow for a happier and healthier life.
+FOLLOW US
+While our website is under repair, the best way to stay up to date with our shop is to follow us on Facebook and Instagram
+
+-->
         </main>
 
 <script>
