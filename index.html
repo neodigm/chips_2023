@@ -52,13 +52,55 @@
         <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:wght@100;300;400|Roboto+Slab:wght@100;300;400" rel="stylesheet" type="text/css"></link>
         <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@40,300,0,0" rel="stylesheet" />
 
+        <style>
+            /*  N55 overrides  */
+            /* brand | primary | secondary */
+            .l-snackbar .snackbar__cont[data-n55-theme='brand'] { box-shadow: inset var(--chips-theme-green) 0 0 6px 2px !important; background: linear-gradient(45deg, var(--chips-theme-green) 0%, var(--chips-theme-green) 100%) !important; }
+                .l-snackbar .snackbar__cont[data-n55-theme='brand'] .snackbar__progbar { background-color: var(--chips-theme-red) !important }
+                .l-snackbar .snackbar__cont[data-n55-theme='brand'] .snackbar__progbar { background: var(--chips-theme-red) !important }
+            .l-snackbar .snackbar__cont[data-n55-theme='primary'] { box-shadow: inset var(--chips-theme-beige) 0 0 6px 2px !important; background: linear-gradient(45deg, var(--chips-theme-beige) 0%, var(--chips-theme-beige) 100%) !important; }
+                .l-snackbar .snackbar__cont[data-n55-theme='primary'] .snackbar__progbar { background-color: var(--chips-theme-green) !important }
+                .l-snackbar .snackbar__cont[data-n55-theme='primary'] .snackbar__progbar { background: var(--chips-theme-green) !important }
+            .l-snackbar .snackbar__cont[data-n55-theme='secondary'] { box-shadow: inset var(--chips-theme-red)   0 0 6px 2px !important; background: linear-gradient(45deg, var(--chips-theme-red) 0%, var(--chips-theme-red)     100%) !important; }
+                .l-snackbar .snackbar__cont[data-n55-theme='secondary'] .snackbar__progbar { background-color: var(--chips-theme-beige) !important }
+                .l-snackbar .snackbar__cont[data-n55-theme='secondary'] .snackbar__progbar { background: var(--chips-theme-beige) !important }
+
+            [data-n55-enchanted-cta][data-n55-theme='brand']     { background: linear-gradient(var(--chips-theme-green), var(--chips-theme-green)) !important; }
+            [data-n55-enchanted-cta][data-n55-theme='primary']   { background: linear-gradient(var(--chips-theme-beige), var(--chips-theme-beige)) !important; }
+            [data-n55-enchanted-cta][data-n55-theme='secondary'] { background: linear-gradient(var(--chips-theme-red), var(--chips-theme-red)) !important; }
+
+            *::-webkit-scrollbar {
+                width: 10px; height: 10px;
+            }
+            *::-webkit-scrollbar-thumb {
+                background: var( --chips-theme-red );
+            }
+            *::-webkit-scrollbar-track {
+                background: rgba(181, 175, 148, 1);
+            }
+            ::selection {
+                color: #fff;
+                background: var( --chips-theme-red );
+                text-shadow: none;
+            }
+
+            /* Data View Grid */
+            .l-dataview { display:grid; grid-template-columns: 2% 20% 20% 20% 38%;}
+            .l-dataview aside { border: solid 1px #ddd;}
+            .l-dataview aside p { font-size: 12px;}
+
+        </style>
+
         <style>  /* brand */
-            /*  */
+            /* chips */
             :root {
                 --chips-theme-green: #0F2B1A;  /* Primary | represents the green in Italy’s national flag */
                 --chips-theme-gray:  #E5E6E5;  /* Secondary | color is a light gray represents the sophistication and education */
                 --chips-theme-beige: #B5AF94;  /* Third | Cork material that is most used in the custom orthotics */
                 --chips-theme-red:   #CF2027;  /* Accent | red of the italian flag */
+            }
+            .l-main {
+                overflow-x: hidden; /* Hide horizontal scrollbar */
             }
             .c-primary { color: var( --chips-theme-green ) }
             .c-secondary { color: var( --chips-theme-gray ) }
@@ -118,8 +160,25 @@
                 margin: 0; padding: 0;
             }
                 .l-main .l-starz {
+                    margin: 0; padding: 0;
                     user-select: none;
                 }
+
+            .l-main .content__cards {
+                display:grid; grid-template-columns: 100%;
+                justify-items: center;
+            }
+                .l-main ARTICLE {
+                    max-width: 88vw;
+                    margin: 12px;
+                }
+                    .l-main ARTICLE > IMG {
+                        border-radius: 4px;
+                        width: 100%; height: auto;
+                        user-select: none;
+                    }
+
+                
 
             /*  MQ  */
             @media only screen and (min-width:48.1em){/* med *//* lg */
@@ -130,46 +189,10 @@
                 .txtH1 { font-size: 2.2em; font-weight: 600; }
                 .disp__phone { display: none;}
                 .disp__desk  { display: block;}
-            }
-        </style>
 
-        <style>
-            /*  N55 overrides  */
-            /* brand | primary | secondary */
-            .l-snackbar .snackbar__cont[data-n55-theme='brand'] { box-shadow: inset var(--chips-theme-green) 0 0 6px 2px !important; background: linear-gradient(45deg, var(--chips-theme-green) 0%, var(--chips-theme-green) 100%) !important; }
-                .l-snackbar .snackbar__cont[data-n55-theme='brand'] .snackbar__progbar { background-color: var(--chips-theme-red) !important }
-                .l-snackbar .snackbar__cont[data-n55-theme='brand'] .snackbar__progbar { background: var(--chips-theme-red) !important }
-            .l-snackbar .snackbar__cont[data-n55-theme='primary'] { box-shadow: inset var(--chips-theme-beige) 0 0 6px 2px !important; background: linear-gradient(45deg, var(--chips-theme-beige) 0%, var(--chips-theme-beige) 100%) !important; }
-                .l-snackbar .snackbar__cont[data-n55-theme='primary'] .snackbar__progbar { background-color: var(--chips-theme-green) !important }
-                .l-snackbar .snackbar__cont[data-n55-theme='primary'] .snackbar__progbar { background: var(--chips-theme-green) !important }
-            .l-snackbar .snackbar__cont[data-n55-theme='secondary'] { box-shadow: inset var(--chips-theme-red)   0 0 6px 2px !important; background: linear-gradient(45deg, var(--chips-theme-red) 0%, var(--chips-theme-red)     100%) !important; }
-                .l-snackbar .snackbar__cont[data-n55-theme='secondary'] .snackbar__progbar { background-color: var(--chips-theme-beige) !important }
-                .l-snackbar .snackbar__cont[data-n55-theme='secondary'] .snackbar__progbar { background: var(--chips-theme-beige) !important }
-
-            [data-n55-enchanted-cta][data-n55-theme='brand']     { background: linear-gradient(var(--chips-theme-green), var(--chips-theme-green)) !important; }
-            [data-n55-enchanted-cta][data-n55-theme='primary']   { background: linear-gradient(var(--chips-theme-beige), var(--chips-theme-beige)) !important; }
-            [data-n55-enchanted-cta][data-n55-theme='secondary'] { background: linear-gradient(var(--chips-theme-red), var(--chips-theme-red)) !important; }
-
-            *::-webkit-scrollbar {
-                width: 10px; height: 10px;
+                .l-main .content__cards { display:grid; grid-template-columns: 34% 32% 34%; }
+                    .l-main ARTICLE { max-width: 22vw; }
             }
-            *::-webkit-scrollbar-thumb {
-                background: var( --chips-theme-red );
-            }
-            *::-webkit-scrollbar-track {
-                background: rgba(181, 175, 148, 1);
-            }
-            ::selection {
-                color: #fff;
-                background: var( --chips-theme-red );
-                text-shadow: none;
-            }
-
-            /* Data View Grid */
-            .l-dataview { display:grid; grid-template-columns: 2% 20% 20% 20% 38%;}
-            .l-dataview aside { border: solid 1px #ddd;}
-            .l-dataview aside p { font-size: 12px;}
-
         </style>
     </head>
     <body data-n55-ampm-theme="light">
@@ -179,7 +202,7 @@
                 <section id="" class="banner__top h-center ">
                     <img id="" class="lgo" src="img/Chiappetta_Shoes_logo.png" alt="TODO"
                     data-n55-theme="brand"
-                    data-n55-toast="Grand Opening Celebration|April 6 - 15"
+                    data-n55-toast="Grand Opening Celebration|April 3 - 15"
                     onclick="neodigmWired4Sound.sound( 5 ); NeodigmClaire.init().doConfetti( '#n55__para--exterior' )">
                 </section>
 
@@ -205,10 +228,10 @@
 
                 <section id="" class="l-italia"> <div></div><div></div><div></div> </section>
 
-                <section id="" class="banner__grand"
+                <section id="grand__cont" class="banner__grand"
                 data-n55-theme="primary"
-                data-n55-toast="Grand Opening Celebration|April 6 - 15"
-                onclick="neodigmWired4Sound.sound( 5 ); NeodigmClaire.init().doConfetti( '#grand__img' )">
+                data-n55-toast="Grand Opening Celebration|April 3 - 15"
+                onclick="neodigmWired4Sound.sound( 5 ); NeodigmClaire.init().doConfetti( '#n55__para--exterior' )">
                     <img id="grand__img" class="grand" src="img/Chiappetta_Shoes_grand_opening.jpg" alt="TODO">
                 </section>
 
@@ -218,6 +241,24 @@
                     <p class="l-starz c-third">
                         <span class="material-symbols-outlined">star_rate</span> <span class="material-symbols-outlined">star_rate</span> <span class="material-symbols-outlined">star_rate</span> <span class="material-symbols-outlined">star_rate</span> <span class="material-symbols-outlined">star_rate</span>
                     </p>
+                </section>
+
+                <section id="" class="content__cards">
+                    <article id="" class="">
+                        <img id="" class="" src="img/Chiappetta_Shoes_family.jpg" alt="TODO">
+                        <p class="readable txtH2 h-center c-third">FAMILY OWNED</p>
+                        <p class="readable txtP h-just c-primary">We are a family business that has been solving foot problems since 1921. Now four generations in, footwear is in our blood. Lori, Fred, Nick, and Tony Chiappetta have unique individual strengths that have created a perfect team.</p>
+                    </article>
+                    <article id="" class="">
+                        <img id="" class="" src="/img/Chiappetta_Shoes_quality.jpg" alt="TODO">
+                        <p class="readable txtH2 h-center c-third">PROBLEM SOLVERS</p>
+                        <p class="readable txtP h-just c-primary">Chiappetta Shoes have on-hand pedorthists to properly analyze your feet and give you the best solution to solve your foot problem. Our custom orthotics are arguably the best in the country and have improved thousands of lives.</p>
+                    </article>
+                    <article id="" class="">
+                        <img id="" class="" src="/img/Chiappetta_Shoes_in_stock.jpg" alt="TODO">
+                        <p class="readable txtH2 h-center c-third">QUALITY SEEKERS</p>
+                        <p class="readable txtP h-just c-primary">Not only is our footwear top quality, but our staff are too. When you come to our store, you will receive one-on-one customer service where your needs are put first. Our new store is also built on quality to match the quality of service and footwear offered. Chiappetta Shoes currently holds the title of "Best Comfort Specialty Store" by Footwear Plus Magazine.</p>
+                    </article>
                 </section>
 
             </div>
