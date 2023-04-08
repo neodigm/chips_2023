@@ -123,6 +123,9 @@
                 padding: 8px 0; margin: 0 0 8px 0;
                 border: solid 1px var( --chips-theme-beige ); border-width: 1px 0 1px 0;
             }
+                .l-main .banner__appoint .click__here {
+                    cursor: pointer;
+                }
             .l-main .banner__address {
                 background-color: var( --chips-theme-gray );
                 padding: 8px 0;
@@ -196,6 +199,17 @@
                     user-select: none;
                 }
 
+            .l-main .content_follow {
+                background-color: var( --chips-theme-green );
+                margin: 0; padding: 16px;
+            }
+                .l-main .content_follow .social__para {
+                    letter-spacing: 2rem;
+                }
+                    .l-main .content_follow A IMG {
+                        max-width: 96px;
+                    }
+
             /*  MQ  */
             @media only screen and (min-width:48.1em){/* med *//* lg */
                 .txtP { font-size: 1em; font-weight: 200; }
@@ -216,17 +230,17 @@
     </head>
     <body data-n55-ampm-theme="light">
         <a class="js-skip__main--id skip__main" href="#a11y-skipmain">Skip to Main Content</a>
-        <main id="a11y-skipmain" role="main">
+        <main id="" role="main">
             <div class="l-main">
                 <section id="" class="banner__top h-center ">
-                    <img id="" class="lgo" src="img/Chiappetta_Shoes_logo.png" alt="TODO"
+                    <img id="" class="lgo" src="img/Chiappetta_Shoes_logo.png" alt="Chiappetta Shoes"
                     data-n55-theme="brand"
                     data-n55-toast="Grand Opening Celebration|April 3 - 15"
                     onclick="neodigmWired4Sound.sound( 5 ); NeodigmClaire.init().doConfetti( '#n55__para--exterior' )">
                 </section>
 
                 <section id="" class="banner__appoint h-center ">
-                    <p class="readable txtH3 c-primary"><span class="c-accent h-under h-txt-dec-unset">CLICK HERE</span> TO BOOK AN ORTHOTIC APPOINTMENT</p>
+                    <p class="readable txtH3 c-primary"><span class="c-accent click__here" data-n55-theme="primary" data-n55-toast="While our website is under repair|follow us on Facebook and Instagram">CLICK HERE</span> TO BOOK AN ORTHOTIC APPOINTMENT</p>
                 </section>
 
                 <section id="" class="banner__address h-center ">
@@ -235,23 +249,23 @@
                 </section>
 
                 <section id="" class="banner__hero disp__phone">
-                    <img id="" class="hero" src="img/Chiappetta_Shoes_exterior.jpg" alt="TODO">
+                    <img id="" class="hero" src="img/Chiappetta_Shoes_exterior.webp" alt="Chiappetta Shoes Store">
                 </section>
 
-                <neodigm-parallax id="n55__para--exterior" class="disp__desk" data-n55-parallax="img/Chiappetta_Shoes_exterior.jpg"
+                <neodigm-parallax id="n55__para--exterior" class="disp__desk" data-n55-parallax="img/Chiappetta_Shoes_exterior.webp"
                 data-n55-parallax-size="medium">
                     <section>
-                    <aside></aside>
+                        <aside></aside>
                     </section>
                 </neodigm-parallax> <!-- (c) 2023 🗝️ www.theScottKrause.com -->
 
-                <section id="" class="l-italia"> <div></div><div></div><div></div> </section>
+                <section id="a11y-skipmain" class="l-italia"> <div></div><div></div><div></div> </section>
 
                 <section id="grand__cont" class="banner__grand"
                 data-n55-theme="primary"
                 data-n55-toast="Grand Opening Celebration|April 3 - 15"
                 onclick="neodigmWired4Sound.sound( 5 ); NeodigmClaire.init().doConfetti( '#n55__para--exterior' )">
-                    <img id="grand__img" class="grand" src="img/Chiappetta_Shoes_grand_opening.jpg" alt="TODO">
+                    <img id="grand__img" class="grand" src="img/Chiappetta_Shoes_grand_opening.jpg" alt="Chiappetta Shoes Grand Opening">
                 </section>
 
                 <section id="" class="banner__whoweare h-center">
@@ -282,29 +296,26 @@
 
                 <section id="" class="content_services">
                     <article id="" class="">
-                        <p class="readable txtH2 h-left c-third">SERVICES</p>
+                        <p class="readable txtH1 h-left c-primary">SERVICES</p>
                         <section id="" class="l-italia"> <div></div><div></div><div></div> </section>
                         <p class="readable txtP h-just c-primary">While the eyes may be the window to one’s soul, the feet are the window to one’s general health. If you suffer from foot pain, you are not alone. Over 75% of adults will suffer from serious foot problems during their lifetime. For over four generations, Chiappetta Shoes has dedicated our business to promoting healthier living through good foot health. What does our commitment to understanding and alleviating foot problems mean for you? To our pedorthic team, living with foot pain is simply not an option. We are advocates for our customers, devoted to tailoring solutions that allow for a happier and healthier life.</p>
                     </article>
                     <article id="" class="" style="background-image: url('img/Chiappetta_Shoes_service.jpg');"></article>
                 </section>
 
-            </div>
+                <section id="" class="content_follow">
+                    <p class="readable txtH1 h-center c-third">FOLLOW US</p>
+                    <p class="readable txtH3 h-center c-third">While our website is under repair, the best way to stay up to date with our shop is to follow us on Facebook and Instagram</p>
+                    <p class="social__para h-center">
+                        <a href="https://www.facebook.com/chiashoes" target="_blank" ><img src="/IMG/facebook.png" alt="Chiappetta Shoes Facebook" onclick="neodigmWired4Sound.sound( 5 )"></a>
+                        <a href="https://www.instagram.com/chiappettashoes/" target="_blank" ><img src="/IMG/insta.png" alt="Chiappetta Shoes Insta" onclick="neodigmWired4Sound.sound( 7 )"></a>
+                        <a href="https://www.youtube.com/channel/UCr3iXVaUKZgxowDEa12kcwA" target="_blank" ><img src="/IMG/youtube.png" alt="Chiappetta Shoes Video" onclick="neodigmWired4Sound.sound( 9 )"></a>
+                    </p>
+                    <br>
+                    <p class="readable txtH3 h-center c-third">(262) 687-9142 &nbsp;  <span> &nbsp; </span> &nbsp;  4820 75TH STREET, KENOSHA, WI</p>
+                </section>
 
-<!-- APPROVED COPY
-Our website is currently under construction
-In the meantime, Please shop at our new store at 4820 75th Street and call us at 262-657-9142 for all inquiries.
-FAMILY OWNED
-We are a family business that has been solving foot problems since 1921. Now four generations in, footwear is in our blood. Lori, Fred, Nick, and Tony Chiappetta have unique individual strengths that have created a perfect team.
-PROBLEM SOLVERS
-Chiappetta Shoes have on-hand pedorthists to properly analyze your feet and give you the best solution to solve your foot problem. Our custom orthotics are arguably the best in the country and have improved thousands of lives.
-QUALITY SEEKERS
-Not only is our footwear top quality, but our staff are too. When you come to our store, you will receive one-on-one customer service where your needs are put first. Our new store is also built on quality to match the quality of service and footwear offered. Chiappetta Shoes currently holds the title of "Best Comfort Specialty Store" by Footwear Plus Magazine.
-SERVICES
-While the eyes may be the window to one’s soul, the feet are the window to one’s general health. If you suffer from foot pain, you are not alone. Over 75% of adults will suffer from serious foot problems during their lifetime. For over four generations, Chiappetta Shoes has dedicated our business to promoting healthier living through good foot health. What does our commitment to understanding and alleviating foot problems mean for you? To our pedorthic team, living with foot pain is simply not an option. We are advocates for our customers, devoted to tailoring solutions that allow for a happier and healthier life.
-FOLLOW US
-While our website is under repair, the best way to stay up to date with our shop is to follow us on Facebook and Instagram
--->
+            </div>
         </main>
 
 <script>
