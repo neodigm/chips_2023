@@ -1,6 +1,6 @@
 # chips_2023
 chips eCom UX
-Shopify PWA Polaris Liquid GraphQL 🍭
+Shopify PWA Polaris Liquid GraphQL 🍭 MuleSoft 🌶️ Solid Start 🧲 TanStack Query Veeva
 ---
 #
 [Portfolio Blog](https://www.theScottKrause.com) |
