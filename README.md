@@ -4,6 +4,8 @@ Shopify PWA Polaris Liquid GraphQL 🍭 MuleSoft 🌶️ Solid Start 🧲 TanSta
 
 Push SSE ✨ optimization 🗝️ security 🍭 Stream Sync Engage
 
+MCP AI Agents Chat UX PWA 3D ThreeJS Vue ✨ HTMX Rust WASM
+
 
 ---
 #
